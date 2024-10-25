@@ -1,6 +1,6 @@
 This project includes code examples and results for the following paper. Please cite the paper if you use them.
 
- S. Kanno, K. Sugisaki, H. Nakamura, H. Yamauchi, R. Sakuma, T. Kobayashi, Q. Gao, and N. Yamamoto, Tensor-Based Quantum Phase Difference Estimation for Large-Scale Demonstration, http://arxiv.org/abs/2408.04946.
+    S. Kanno, K. Sugisaki, H. Nakamura, H. Yamauchi, R. Sakuma, T. Kobayashi, Q. Gao, and N. Yamamoto, Tensor-Based Quantum Phase Difference Estimation for Large-Scale Demonstration, http://arxiv.org/abs/2408.04946.
 
 Note that the result data will overwrite by executing codes.
 
