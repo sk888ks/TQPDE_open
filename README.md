@@ -23,7 +23,6 @@ The codes starts from "MPO", "MPS", and "QPDE" are the MPO, MPS, and QPDE, respe
 
 Code version  
 Python                    3.11.8  
-julia                     1.10.2  
 qiskit                    1.2.4  
 qiskit-aer                0.14.2  
 qiskit-algorithms         0.3.0  
@@ -33,7 +32,6 @@ matplotlib                3.8.3
 scipy                     1.12.0  
 tenacity                  8.3.0  
 (fire-opal 8.1.2 is used in the study, but it is not included in this repository)  
-
 julia                     1.10.2  
 ITensors                  v0.6.16  
 Infiltrator               v1.7.0  
