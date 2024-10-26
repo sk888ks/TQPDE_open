@@ -11,15 +11,16 @@ ENV["PYTHON"] = "/path/to/your/python"
 using Pkg  
 Pkg.build("PyCall")  
 """  
-get_prob.py in src is a tool to extract mean and variance from the output text of a QPDE; after generating output like "python QPDE_Bayes_Hubbard.py > out.txt", execute "python get_prob_RD.py out.txt"
+get_prob.py is a tool to extract destributions from the output text of a QPDE; for example, after generating output like "python QPDE_Bayes_Hubbard.py > out.txt" in examples/Hubbard directry, execute "python ../../src/get_prob_RD.py out.txt"  
+plot_fill.py is a tool to create figures for QPDE from the destributions and to save the figures in "picture" directry, where the QPDE results in the paper are included in the code.
 
 
 The "examples" directly include the code examples such as the Hubbard models. 
-The codes starts from "MPO", "MPS", and "QPDE" are the MPO, MPS, and QPDE, respectively. The "create_hamiltonian" are codes to create Hamiltonian. plot_comare_Trotter in Hubbard includes results for comparison of the time evolution circuits.
-
+The codes starts from "MPO", "MPS", and "QPDE" are the MPO, MPS, and QPDE, respectively. The "create_hamiltonian" are codes to create Hamiltonian. plot_comare_Trotter.py in Hubbard includes results for comparison of the time evolution circuits.  
 The [Fire Opal](https://docs.q-ctrl.com/fire-opal) module is used in the QPDE code, where the reference is as follows. 
 
     P. S. Mundada et al., Experimental Benchmarking of an Automated Deterministic Error-Suppression Workflow for Quantum Algorithms, Phys. Rev. Appl. 20, 024034 (2023).
+
 
 The "pickle_dat", "npy", "molden", and "picture" directories include input and/or output files. Hamiltonian pickle and reference MPO and MPS dat files are in "pickle_dat", brick wall gates (Uprep and Uevol) files are in "npy", molden files for molecular structure depiction is in "molden", and pictures used in our study in "picture".
 
