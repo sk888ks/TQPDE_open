@@ -17,6 +17,9 @@ get_prob.py in src is a tool to extract mean and variance from the output text o
 The "examples" directly include the code examples such as the Hubbard models. 
 The codes starts from "MPO", "MPS", and "QPDE" are the MPO, MPS, and QPDE, respectively. The "create_hamiltonian" are codes to create Hamiltonian. plot_comare_Trotter in Hubbard includes results for comparison of the time evolution circuits.
 
+The [Fire Opal](https://docs.q-ctrl.com/fire-opal) module is used in the QPDE code, where the reference is as follows. 
+
+    P. S. Mundada et al., Experimental Benchmarking of an Automated Deterministic Error-Suppression Workflow for Quantum Algorithms, Phys. Rev. Appl. 20, 024034 (2023).
 
 The "pickle_dat", "npy", "molden", and "picture" directories include input and/or output files. Hamiltonian pickle and reference MPO and MPS dat files are in "pickle_dat", brick wall gates (Uprep and Uevol) files are in "npy", molden files for molecular structure depiction is in "molden", and pictures used in our study in "picture".
 
@@ -31,7 +34,7 @@ qiskit-nature             0.7.2
 matplotlib                3.8.3  
 scipy                     1.12.0  
 tenacity                  8.3.0  
-(fire-opal 8.1.2 is used in the study, but it is not included in this repository)  
+fire-opal                 8.1.2  
 Julia                     1.10.2  
 ITensors                  v0.6.16  
 Infiltrator               v1.7.0  
