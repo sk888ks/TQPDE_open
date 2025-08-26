@@ -2678,6 +2678,35 @@ function hamcall(name; save_dir = save_dir_pickle)
     end
 end
 
+function hamcall_from_txt(txt_name; save_dir = save_dir_pickle)
+    # Call hamiltonian from txt
+
+    # Read the text file
+    data = readdlm("$(save_dir)/$(txt_name).txt", '\n', String)
+
+    # Prepare empty arrays
+    pauli_strings = String[]
+    coeffs = Float64[]
+
+    # Process each line to extract string and floating-point number
+    for line in data
+        # Remove leading and trailing whitespaces
+        line = strip(line)
+        # Split by whitespace
+        parts = split(line)
+        # Convert the first column to String, second to Float64
+        string_part = parts[1]
+        float_part = parse(Float64, parts[2])
+        # Append to arrays
+        push!(pauli_strings, string_part)
+        push!(coeffs, float_part)
+    end
+
+    # Construct Python SparsePauliOp
+    ham = qiskit.SparsePauliOp(pauli_strings, coeffs)
+    return ham
+end
+
 function get_excited_state(num_ex, psi_list, psi0, H; nsweeps_ex = 10, maxdim_ex = 2, mindim_ex = 2, cutoff_ex = 1e-12)
     energy_ex = nothing
     psi_ex = nothing

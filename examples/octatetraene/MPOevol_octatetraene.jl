@@ -20,6 +20,7 @@ let
     name_BW = "$(name_ham)_slice$(num_time_slice)_step$(time_step)_depth$(num_depth_BW)_sweep$(num_sweep_BW)"
 
     ham = hamcall(name_ham)
+    # ham = hamcall_from_txt(name_ham) # if you want to read from txt file
 
     #coeff for itensor
     coeffs, paulis = term_to_list(ham)
